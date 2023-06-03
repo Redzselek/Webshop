@@ -9,91 +9,94 @@
     <link rel="stylesheet" href="assets/css/yoink.css"/>
   </head>
 
-  <body>
+  <body onload="artolt()">
     <div class="header">
-      <a href="#default" class="logo">Böbe bögre</a>
+      <a href="#default" class="logo">Böbe Bögre</a>
       <div class="header-right">
         <a class="active" href="#home">Home</a>
         <a href="#contact">Kosárban</a>
-        <a id="kosarkep"><img src="assets/images/shopping-cart0.png" alt=""></a>
+        <a id="kosarkep"><img class="kosarkepecske" id="kosarkepecske" src="assets/images/shopping-cart0.png" alt=""></a>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="kosar-tartalom">
       
         <div class="column">
         <div class="card">
           <img src="assets/images/product1.png" alt="Termék 1" />
-          <h3>Termék 1</h3>
-          <p>Ár: 799 Ft</p>
-          <button type="button">Kosárba</button>
+          <h3 class="termek-nev">Termék 1</h3>
+          <p class= "termek-ar">Ár:799 Ft</p>
+          <button type="button" class="add-cart cart1" onclick="Kosarhozad(1)">Kosárba</button>
         </div>
       </div>
 
       <div class="column">
         <div class="card">
           <img src="assets/images/product2.png" alt="Termék 1" />
-          <h3>Termék 1</h3>
-          <p>Ár: 850 Ft</p>
-          <button type="button">Kosárba</button>
+          <h3 class="termek-nev">Termék 1</h3>
+          <p class= "termek-ar">Ár:850 Ft</p>
+          <button type="button" class="add-cart cart2" onclick="Kosarhozad(2)">Kosárba</button>
         </div>
       </div>
       
       <div class="column">
         <div class="card">
           <img src="assets/images/product3.png" alt="Termék 1" />
-          <h3>Termék 1</h3>
-          <p>Ár: 679 Ft</p>
-          <button type="button">Kosárba</button>
+          <h3 class="termek-nev">Termék 1</h3>
+          <p class= "termek-ar">Ár:679 Ft</p>
+          <button type="button" class="add-cart cart3" onclick="Kosarhozad(3)">Kosárba</button>
         </div>
       </div>
 
       <div class="column">
         <div class="card">
           <img src="assets/images/product4.png" alt="Termék 1" />
-          <h3>Termék 1</h3>
-          <p>Ár: 980 Ft</p>
-          <button type="button">Kosárba</button>
+          <h3 class="termek-nev">Termék 1</h3>
+          <p class= "termek-ar">Ár:980 Ft</p>
+          <button type="button" class="add-cart cart4" onclick="Kosarhozad(4)">Kosárba</button>
         </div>
       </div>
 
       <div class="column">
         <div class="card">
           <img src="assets/images/product5.png" alt="Termék 1" />
-          <h3>Termék 1</h3>
-          <p>Ár: 1299 Ft</p>
-          <button type="button">Kosárba</button>
+          <h3 class="termek-nev">Termék 1</h3>
+          <p class= "termek-ar">Ár:1299 Ft</p>
+          <button type="button" class="add-cart cart5" onclick="Kosarhozad(5)">Kosárba</button>
         </div>
       </div>
 
       <div class="column">
         <div class="card">
           <img src="assets/images/product6.png" alt="Termék 1" />
-          <h3>Termék 1</h3>
-          <p>Ár: 659 Ft</p>
-          <button type="button">Kosárba</button>
+          <h3 class="termek-nev">Termék 1</h3>
+          <p class= "termek-ar">Ár:659 Ft</p>
+          <button type="button" class="add-cart cart6" onclick="Kosarhozad(6)">Kosárba</button>
         </div>
       </div>
 
       <div class="column">
         <div class="card">
           <img src="assets/images/product7.png" alt="Termék 1" />
-          <h3>Termék 1</h3>
-          <p>Ár: 1000 Ft</p>
-          <button type="button">Kosárba</button>
+          <h3 class="termek-nev">Termék 1</h3>
+          <p class= "termek-ar">Ár:100 Ft</p>
+          <button type="button" class="add-cart cart7" onclick="Kosarhozad(7)">Kosárba</button>
         </div>
       </div>
 
       <div class="column">
         <div class="card">
           <img src="assets/images/product8.png" alt="Termék 1" />
-          <h3>Termék 1</h3>
-          <p>Ár: 879 Ft</p>
-          <button type="button">Kosárba</button>
+          <h3 class="termek-nev">Termék 1</h3>
+          <p class= "termek-ar">Ár:879 Ft</p>
+          <button type="button" class="add-cart cart8" onclick="Kosarhozad(8)">Kosárba</button>
         </div>
       </div>
 
     </div>
+
+    <button onclick="showCart()"></button>
+
     <footer>
       <p>&copy; 2023 Webshop</p>
     </footer>
