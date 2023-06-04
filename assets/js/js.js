@@ -71,3 +71,16 @@ let products = [
   
 ];
 
+function initApp(){
+  products.forEach((value, key) =>{
+      let newDiv = document.createElement('div');
+      newDiv.classList.add('item');
+      newDiv.innerHTML = `
+          <img src="assets/images/${value.image}">
+          <div class="nev">${value.name}</div>
+          <div class="ar">${value.price.toLocaleString()} ft</div>
+          <button onclick="addToCard(${key})">Kosárba</button>`;
+      list.appendChild(newDiv);
+  })
+}
+initApp();

@@ -32,6 +32,37 @@ header .shopping span{
   padding: 3px 10px;
 }
 
+.list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-top: 50px;
+}
+.list .item{
+  text-align: center;
+  background-color: #232c3b;;
+  padding: 20px;
+  box-shadow: 0 10px 20px #0803366c;
+  letter-spacing: 1px;
+}
+.list .item img{
+  width: 90%;
+}
+.list .item .nev{
+  font-weight: 600;
+  color: #88dae3;
+}
+.list .item .ar{
+  margin: 10px;
+  color: #88dae3;
+}
+.list .item button{
+  background-color: #1f7499;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+}
 
 .card{
   position: fixed;
