@@ -95,7 +95,6 @@ header .shopping span{
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
 }
 .card .checkOut div{
   background-color: #3b2f50;
@@ -131,6 +130,7 @@ header .shopping span{
 .listCard li button{
   background-color: #fff5;
   border: none;
+  box-shadow: none;
 }
 .listCard .db{
   margin: 0 10px;

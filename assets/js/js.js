@@ -49,24 +49,6 @@ let products = [
       name: 'Menő nagybögre festett belsővel',
       image: '6.png',
       price: 500
-  },
-  {
-      id: 7,
-      name: 'Hibiszkuszok meg talán levendula + alátét',
-      image: '7.png',
-      price: 500
-  },
-  {
-      id: 8,
-      name: 'Pipacsos bögre emelt talpal',
-      image: '8.png',
-      price: 500
-  },
-  {
-      id: 9,
-      name: 'Pipacsos bögre emelt talpal delux',
-      image: '8.png',
-      price: 500
   }
   
 ];
@@ -111,13 +93,21 @@ function reloadCard(){
               <div>${value.price.toLocaleString()}</div>
               <div>
                   <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
-                  <div class="db">${value.quantity}</div>
+                  <div class="db">${value.quantity+"db"}</div>
                   <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
               </div>`;
               listCard.appendChild(newDiv);
       }
   })
-  total.innerText = totalPrice.toLocaleString()+"ft";
+  total.innerText = totalPrice.toLocaleString()+"ft fizetek";
+  console.log(total);
+  if(total.innerHTML == "0ft fizetek")
+  {
+    console.log(total);
+    total.innerText = totalPrice.toLocaleString()+"ft";
+  }
+
+
   quantity.innerText = count;
 }
 function changeQuantity(key, quantity){
