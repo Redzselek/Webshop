@@ -7,6 +7,11 @@ body{
   margin: auto;
   transition: 0.5s;
 }
+.shopping
+{
+  cursor: pointer;
+}
+
 header{
   display: grid;
   grid-template-columns: 1fr 50px;
@@ -73,12 +78,33 @@ header .shopping span{
   height: 100vh;
   transition: 0.5s;
 }
+
 .active .card{
   left: calc(100% - 500px);
 }
 .active .container{
  transform: translateX(-200px);
 }
+
+.card2{
+  position: fixed;
+  top: -100%;
+  left: 0%;
+  width: 500px;
+  background-color: #2f3450;
+  height: 100vh;
+  transition: 0.5s;
+  z-index: 1;
+  color: #88dae3;
+}
+
+.active2 .card2{
+  right: calc(100% - 500px);
+}
+.active2 .container2{
+ transform: translateY(910px);
+}
+
 .card h1{
   color: #88dae3;
   font-weight: bolder;
@@ -150,3 +176,8 @@ header .shopping span{
   transform: scale(1.075) rotate(-1deg);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
