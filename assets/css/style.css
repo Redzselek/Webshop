@@ -64,6 +64,10 @@ body {
   margin-bottom: 5px;
 }
 
+.shopping img{
+  width: 40px;
+}
+
 .header a {
   float: left;
   color: black;

@@ -55,7 +55,7 @@ function artolt() {
 console.log("Harmadik log", termekek);
 
 for (let i = 0; i < kosar.length; i++) {
-  kosar[i].addEventListener("click", () => {
+  kosar[i].addEventListener('click', () => {
     Kocsiban();
   });
 }
