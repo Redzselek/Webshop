@@ -127,7 +127,7 @@ var myVar;
 
 function myFunction() {
     document.getElementById("container").style.display = "none";
-    myVar = setTimeout(showPage, 5000);
+    myVar = setTimeout(showPage, 4000);
 }
 
 function showPage() {
