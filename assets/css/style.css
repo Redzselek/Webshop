@@ -181,3 +181,8 @@ input::-webkit-inner-spin-button {
 -webkit-appearance: none;
 margin: 0;
 }
+
+input{
+  margin-bottom: 5px;
+  width: 220px;
+}

@@ -99,6 +99,9 @@ function reloadCard(){
         }
     })
     total.innerText = totalPrice.toLocaleString()+"ft";
+    if (total.innerText != "0ft") {
+        total.innerText = totalPrice.toLocaleString()+"ft Fizetek";
+    }
     quantity.innerText = count;
 }
 function changeQuantity(key, quantity){
@@ -127,12 +130,20 @@ var myVar;
 
 function myFunction() {
     document.getElementById("container").style.display = "none";
-    myVar = setTimeout(showPage, 4000);
+    myVar = setTimeout(showPage, 4);
 }
 
 function showPage() {
     document.getElementById("loader").style.display = "none";
     document.getElementById("container").style.display = "block";
+    var t = document.getElementsByClassName("nev");
+//Danke Tanár úr
+    var maxheight=0;
+    for (i=0;i<t.length;i++)
+        if (t[i].offsetHeight>maxheight) maxheight = t[i].offsetHeight;
+    for (i=0;i<t.length;i++)
+        t[i].style.height=maxheight+"px";
+    
 }
 
 
@@ -148,7 +159,9 @@ SzamlazasZar.addEventListener('click', ()=>{
 
 
 
-
+/* if (total.innerText != "0ft") {
+    total.innerText = totalPrice.toLocaleString()+"ft Fizetek";
+} */
 
 
 
