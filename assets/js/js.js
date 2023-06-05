@@ -28,13 +28,13 @@ let products = [
     },
     {
         id: 3,
-        name: 'Kávés bögre az asszony álomkert jével+ alátétt',
+        name: 'Kávés bögre az asszony álomkertjével+ alátét',
         image: '3.PNG',
         price: 500
     },
     {
         id: 4,
-        name: 'Nagy bögre pitypangal',
+        name: 'Nagy bögre pitypanggal',
         image: '4.PNG',
         price: 500
     },
