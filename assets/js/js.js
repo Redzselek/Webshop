@@ -6,12 +6,35 @@ let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
+var mukodj = document.querySelector('.szallitasicim').offsetTop
+console.log(mukodj);
+
 openShopping.addEventListener('click', ()=>{
     body.classList.add('active');
 })
+
 closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
 })
+
+var doboz = document.getElementById("c1-13")  
+var dobozchecked = document.getElementById("c1-13").checked  
+
+doboz.addEventListener('click', ()=>{
+    Checkbox()
+})
+
+function Checkbox() 
+{
+    console.log("Beleléptem a checkbox-ba");
+    if (dobozchecked == true) 
+    {
+        document.getElementById("irsz").oninput = document.getElementById("szallirsz").oninput
+    }
+    console.log(document.getElementById("irsz").oninput);
+    console.log(document.getElementById("szallirsz").oninput);
+}
+
 
 let products = [
     {
@@ -183,4 +206,4 @@ SzamlazasZar.addEventListener('click', ()=>{
 
 
 
-//igen ez fullra a netről van másolva, de legalább kézzel írtam és nagyából értem mi mit csinál😕
+//igen ez fullra a netről van másolva, de legalább kézzel írtam és nagyából értem mi mit csinál😕   

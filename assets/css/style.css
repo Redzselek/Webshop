@@ -73,14 +73,14 @@ header .shopping span{
   position: fixed;
   top:0;
   left: 100%;
-  width: 500px;
+  width: 700px;
   background-color: #2f3450;
   height: 100vh;
   transition: 0.5s;
 }
 
 .active .card{
-  left: calc(100% - 500px);
+  left: calc(100% - 700px);
 }
 .active .container{
  transform: translateX(-200px);
@@ -90,16 +90,16 @@ header .shopping span{
   position: fixed;
   top: -100%;
   left: 0%;
-  width: 500px;
+  width: 700px;
   background-color: #2f3450;
-  height: 100vh;
+  height: 101vh;
   transition: 0.5s;
   z-index: 1;
   color: #88dae3;
 }
 
 .active2 .card2{
-  right: calc(100% - 500px);
+  right: calc(100vh - 700px);
 }
 .active2 .container2{
  transform: translateY(910px);
@@ -122,7 +122,7 @@ header .shopping span{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.card .checkOut div{
+.card .checkOut div {
   background-color: #3b2f50;
   width: 100%;
   height: 70px;
@@ -132,6 +132,20 @@ header .shopping span{
   font-weight: 600;
   cursor: pointer;
   color: #88dae3;
+}
+
+.SzamlazasZar {
+  background-color: #3b2f50;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+  color: #88dae3;
+  position: relative;
+  bottom: -211%;
 }
 
 .card .checkOut div:nth-child(2){
@@ -175,6 +189,44 @@ header .shopping span{
 .item:hover {
   transform: scale(1.075) rotate(-1deg);
 }
+
+.szallitasicim h2
+{
+  background-color: #3b2f50;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    color: #88dae3;
+
+}
+
+.szamla
+{
+  padding-left: 40px;
+}
+
+@media screen and (max-width:878px)
+{
+  .szallitasicim 
+  {
+    padding-left: 40px;
+  }
+}
+
+#szamlaDIV
+{
+  overflow-inline: auto;
+}
+
+.checkbox-wrapper-13
+{
+  break-inside: avoid-column;
+}
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
