@@ -24,10 +24,10 @@ utanvetelclass.addEventListener('click', ()=>{
     body.classList.add('utanvetelkell');
 })
 nemutanvetelclass.addEventListener('click', ()=>{
-    body.classList.remove('nemutanvetelkell');
+    body.classList.remove('utanvetelkell');
 })
 
-var utanvetel = document.getElementById("utanvetel").checked = false;
+/* var utanvetel = document.getElementById("utanvetel").checked = false;
 
 function Utanvetel(x)
 {
@@ -39,7 +39,7 @@ function Utanvetel(x)
     else{
         osszesar.innerHTML = x+"ft lesz a fizetendő összeg"   
     }
-}
+} */
 
 /* var doboz = document.getElementById("c1-13")  
 var dobozchecked = document.getElementById("c1-13").checked  
@@ -59,9 +59,9 @@ function Checkbox()
     console.log(document.getElementById("szallirsz").oninput); */
 }
 
-let fizetes = document.querySelector('.fizetes');
+let fizetes = document.querySelector('.tovabb');
 fizetes.addEventListener('click', ()=>{
-    document.getElementById("fizetes").style.display = "flex";
+    Fizetes()
 })
 
 
@@ -161,10 +161,24 @@ function reloadCard(){
         total.innerText = totalPrice.toLocaleString()+"ft Fizetek";
     }
     quantity.innerText = count;
-    Utanvetel(totalPrice)
-    
+    Fizetes(totalPrice)
 }
 
+function Fizetes(totalPrice) 
+    {
+        console.log("Bekerültem a fizetesbe");
+        console.log(totalPrice);
+        document.getElementById("fizetes").style.display = "flex";
+        if (body.classList.contains("utanvetelkell")) 
+        {
+            totalPrice=totalPrice+490 
+            osszesar.innerHTML = totalPrice+"ft lesz a fizetendő összeg"  
+        }
+        else(!body.classList.contains("utanvetelkell"))
+        {
+            osszesar.innerHTML = totalPrice+"ft lesz a fizetendő összeg"   
+        }     
+    }
 
 
 

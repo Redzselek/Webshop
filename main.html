@@ -39,7 +39,7 @@
                     <div class="checkbox-wrapper-13">
                         <input type="checkbox" id="c1-13"> A szállítási cím megegyezik a számlázási címmel
                     </div>
-                    <h2 class="fizetes">Tovább</h2>
+                    <h2 class="tovabb">Tovább</h2>
                 </div>
             </div>
         </div>
@@ -49,13 +49,13 @@
                 <div class="cim">
                     <h2>Fizetés</h2>
                     <div class="radiobuttons">
-                        <form>
-                            <input class="utanvetelclass" type="radio" id="utanvetel"value="utanvetel">
-                            <label class="utanvetelclass" for="utanvetel"> Utánvétel (490ft)</label><br>
-                            <input class="nemutanvetelclass" type="radio" id="2" value="CSS">
-                            <label class="nemutanvetelclass" for="2">Kártyás fizetés</label><br>
-                            <input class="nemutanvetelclass" type="radio" id="3" value="JavaScript">
-                            <label class="nemutanvetelclass" for="3">Banki átutalás</label><br><br>                            
+                        <form >
+                            <input class="utanvetelclass"  onclick="Fizetes()"  name="gomb" type="radio" id="utanvetel">
+                            <label class="utanvetelclass"  onclick="Fizetes()"  name="gomb" for="utanvetel"> Utánvétel (490ft)</label><br>
+                            <input class="nemutanvetelclass" name="gomb" type="radio" id="kartyas">
+                            <label class="nemutanvetelclass" name="gomb" for="kartyas">Kártyás fizetés</label><br>
+                            <input class="nemutanvetelclass" name="gomb" type="radio" id="banki" >
+                            <label class="nemutanvetelclass" name="gomb" for="banki">Banki átutalás</label><br><br>                            
                         </form>       
                     </div>
                 </div>
