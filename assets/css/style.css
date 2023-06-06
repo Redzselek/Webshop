@@ -92,7 +92,7 @@ header .shopping span{
   left: 0%;
   width: 700px;
   background-color: #2f3450;
-  height: 101vh;
+  height: 100vh;
   transition: 0.5s;
   z-index: 1;
   color: #88dae3;
@@ -136,8 +136,7 @@ header .shopping span{
 
 .SzamlazasZar {
   background-color: #3b2f50;
-  width: 100%;
-  height: 70px;
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,7 +144,46 @@ header .shopping span{
   cursor: pointer;
   color: #88dae3;
   position: relative;
-  bottom: -211%;
+  left: 65%;
+  border-radius: 10px;
+}
+
+.fizetes
+{
+  display: none;
+}
+
+.active2 .SzamlazasZar
+{
+  bottom: -30%;
+}
+
+.radiobuttons{
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.radiobuttons > checkmark {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  border: 2px solid #333;
+  border-radius: 50%;
+}
+
+.cim
+{
+  margin-top: 10px;
+  padding-left: 40px;
+}
+
+.cim2
+{
+  margin-top: 10px;
 }
 
 .card .checkOut div:nth-child(2){
@@ -183,7 +221,7 @@ header .shopping span{
   text-align: center;
   background-color: #232c3b;
   border-radius: 20px;
-  transition: 0.2s ease-out;
+  transition: 0.25s ease-out;
 }
 
 .item:hover {
@@ -193,15 +231,14 @@ header .shopping span{
 .szallitasicim h2
 {
   background-color: #3b2f50;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    cursor: pointer;
-    color: #88dae3;
-
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+  color: #88dae3;
 }
 
 .szamla
@@ -209,22 +246,16 @@ header .shopping span{
   padding-left: 40px;
 }
 
-@media screen and (max-width:878px)
-{
-  .szallitasicim 
-  {
-    padding-left: 40px;
-  }
-}
-
 #szamlaDIV
 {
   overflow-inline: auto;
 }
 
+
 .checkbox-wrapper-13
 {
   break-inside: avoid-column;
+  margin-top: 15px;
 }
 
 
@@ -234,7 +265,7 @@ input::-webkit-inner-spin-button {
 margin: 0;
 }
 
-input{
+.bemenet{
   margin-bottom: 5px;
   width: 220px;
 }

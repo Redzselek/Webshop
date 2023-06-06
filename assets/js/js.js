@@ -17,12 +17,36 @@ closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
 })
 
-var doboz = document.getElementById("c1-13")  
-var dobozchecked = document.getElementById("c1-13").checked  
+let utanvetelclass = document.querySelector('.utanvetelclass');
+let nemutanvetelclass = document.querySelector('.nemutanvetelclass');
 
+utanvetelclass.addEventListener('click', ()=>{
+    body.classList.add('utanvetelkell');
+})
+nemutanvetelclass.addEventListener('click', ()=>{
+    body.classList.remove('nemutanvetelkell');
+})
+
+var utanvetel = document.getElementById("utanvetel").checked = false;
+
+function Utanvetel(x)
+{
+    if (utanvetel == true) 
+    {
+        x=x+490 
+        osszesar.innerHTML = x+"ft lesz a fizetendő összeg"  
+    }
+    else{
+        osszesar.innerHTML = x+"ft lesz a fizetendő összeg"   
+    }
+}
+
+/* var doboz = document.getElementById("c1-13")  
+var dobozchecked = document.getElementById("c1-13").checked  
 doboz.addEventListener('click', ()=>{
     Checkbox()
 })
+ */
 
 function Checkbox() 
 {
@@ -31,9 +55,18 @@ function Checkbox()
     {
         document.getElementById("irsz").oninput = document.getElementById("szallirsz").oninput
     }
-    console.log(document.getElementById("irsz").oninput);
-    console.log(document.getElementById("szallirsz").oninput);
+    /* console.log(document.getElementById("irsz").oninput);
+    console.log(document.getElementById("szallirsz").oninput); */
 }
+
+let fizetes = document.querySelector('.fizetes');
+fizetes.addEventListener('click', ()=>{
+    document.getElementById("fizetes").style.display = "flex";
+})
+
+
+var osszesar = document.getElementById("osszesar")
+
 
 
 let products = [
@@ -100,10 +133,12 @@ function addToCard(key){
     reloadCard();
     console.log(quantity);
 }
+
+
 function reloadCard(){
     listCard.innerHTML = '';
     let count = 0;
-    let totalPrice = 0;
+    var totalPrice = 0;
     listCards.forEach((value, key)=>{
         totalPrice = totalPrice + value.price;
         count = count + value.quantity;
@@ -126,7 +161,13 @@ function reloadCard(){
         total.innerText = totalPrice.toLocaleString()+"ft Fizetek";
     }
     quantity.innerText = count;
+    Utanvetel(totalPrice)
+    
 }
+
+
+
+
 function changeQuantity(key, quantity){
     if(quantity == 0){
         delete listCards[key];
