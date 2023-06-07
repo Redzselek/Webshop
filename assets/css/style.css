@@ -88,7 +88,7 @@ header .shopping span{
 
 .card2{
   position: fixed;
-  top: -100%;
+  top: -115%;
   left: 0%;
   width: 700px;
   background-color: #2f3450;
@@ -145,6 +145,7 @@ header .shopping span{
   color: #88dae3;
   position: relative;
   left: 65%;
+  top: 14%;
   border-radius: 10px;
 }
 
@@ -265,7 +266,7 @@ input::-webkit-inner-spin-button {
 margin: 0;
 }
 
-.bemenet{
+#bemenet{
   margin-bottom: 5px;
-  width: 220px;
+  width: 230px;
 }

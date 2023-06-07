@@ -41,22 +41,25 @@ function Utanvetel(x)
     }
 } */
 
-/* var doboz = document.getElementById("c1-13")  
-var dobozchecked = document.getElementById("c1-13").checked  
-doboz.addEventListener('click', ()=>{
-    Checkbox()
-})
- */
 
+var doboz = document.getElementById("c1-13")  
 function Checkbox() 
 {
+    var irsz = document.getElementById("irsz").value
+    var telepules = document.getElementById("telepules").value 
+    var utca = document.getElementById("utcahazszam").value
     console.log("Beleléptem a checkbox-ba");
-    if (dobozchecked == true) 
+    if (doboz.checked) 
     {
-        document.getElementById("irsz").oninput = document.getElementById("szallirsz").oninput
+        document.getElementById("szallirsz").value        = irsz
+        document.getElementById("szalltelepules").value   = telepules
+        document.getElementById("szallutcahazszam").value = utca
     }
-    /* console.log(document.getElementById("irsz").oninput);
-    console.log(document.getElementById("szallirsz").oninput); */
+    else{
+        document.getElementById("szallirsz").value        = null
+        document.getElementById("szalltelepules").value        = null
+        document.getElementById("szallutcahazszam").value = null
+    }
 }
 
 let fizetes = document.querySelector('.tovabb');
@@ -74,37 +77,37 @@ let products = [
         id: 1,
         name: 'Kávés bögre sárga virággal + alátét',
         image: '1.PNG',
-        price: 500
+        price: 20000
     },
     {
         id: 2,
         name: 'Teás bögre, fül deformációval',
         image: '2.PNG',
-        price: 500
+        price: 20000
     },
     {
         id: 3,
         name: 'Kávés bögre az asszony álomkertjével+ alátét',
         image: '3.PNG',
-        price: 500
+        price: 20000
     },
     {
         id: 4,
         name: 'Nagy bögre pitypanggal',
         image: '4.PNG',
-        price: 500
+        price: 20000
     },
     {
         id: 5,
         name: 'Menő kisbögre',
         image: '5.PNG',
-        price: 500
+        price: 20000
     },
     {
         id: 6,
         name: 'Menő nagybögre festett belsővel',
         image: '6.PNG',
-        price: 500
+        price: 20000
     }
     
 ];
@@ -160,6 +163,7 @@ function reloadCard(){
     if (total.innerText != "0ft") {
         total.innerText = totalPrice.toLocaleString()+"ft Fizetek";
     }
+    
     quantity.innerText = count;
     Fizetes(totalPrice)
 }
@@ -176,6 +180,7 @@ function Fizetes(totalPrice)
         }
         else(!body.classList.contains("utanvetelkell"))
         {
+            totalPrice=totalPrice 
             osszesar.innerHTML = totalPrice+"ft lesz a fizetendő összeg"   
         }     
     }
@@ -192,7 +197,7 @@ function changeQuantity(key, quantity){
     reloadCard();
 }
 
-setInterval(() => {Proli();}, 1);
+setInterval(() => {Proli();}, 100);
 function Proli() 
 {
     if (quantity.innerHTML == "0") {
@@ -202,13 +207,19 @@ function Proli()
     {
         quantity.style.visibility = "visible";
     }
+    if (total.innerText == '0ft' && body.classList.contains("active2")) {
+        body.classList.remove('active2')
+    }
+
 }
+
+
 
 var myVar;
 
 function myFunction() {
     document.getElementById("container").style.display = "none";
-    myVar = setTimeout(showPage, 4);
+    myVar = setTimeout(showPage, 4000);
 }
 
 function showPage() {
@@ -230,6 +241,9 @@ let SzamlazasZar = document.querySelector('.SzamlazasZar');
 
 SzamlazasNyit.addEventListener('click', ()=>{
     body.classList.add('active2');
+    if (total.innerText == "0ft" && body.classList.contains("active2")) {
+        body.classList.remove('active2')
+    }
 })
 SzamlazasZar.addEventListener('click', ()=>{
     body.classList.remove('active2');

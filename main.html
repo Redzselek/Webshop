@@ -24,20 +24,23 @@
                 <div class="szamla">
                     <br>
                     <h2>Számlázás</h2>
-                    <input id="bemenet" type="text" id="name" placeholder="Név"> <br>
-                    <input id="bemenet" type="number" id="irsz" placeholder="Irányító szám"> <input id="bemenet" type="text" id="telepules" placeholder="Település"> <br>
-                    <input id="bemenet" type="text" id="utca-hazszam" placeholder="Utca házszám"> <br>
-                    <input id="bemenet" type="email" id="email" placeholder="Email címe"> <input id="bemenet" type="number" id="telefonszam" placeholder="Telefonszám(06 20/30/70)" pattern="[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}">        
+                    <input class="bemenet" type="text" id="name" placeholder="Név"> <br>
+                    <input class="bemenet" type="number" id="irsz" placeholder="Irányító szám">
+                    <input class="bemenet" type="text" id="telepules" placeholder="Település"> <br>
+                    <input class="bemenet" type="text" id="utcahazszam" placeholder="Utca házszám"> <br>
+                    <input class="bemenet" type="email" id="email" placeholder="Email címe"> 
+                    <input class="bemenet" type="number" id="telefonszam" placeholder="Telefonszám(06 20/30/70)" pattern="[0-9]{2}-[0-9]{2}-[0-9]{3}-[0-9]{4}">        
                 </div>
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-5">
                 <div class="szallitasicim" style="margin-top: 46px;">
                     <br>
-                    <input id="bemenet" type="number" id="szallirsz" placeholder="Irányító szám"> <input id="bemenet" type="text" id="szalltelepules" placeholder="Település"> <br>
-                    <input id="bemenet" type="text" id="szalutca-hazszam" placeholder="Utca házszám"> <br>
-                    <div class="checkbox-wrapper-13">
-                        <input type="checkbox" id="c1-13"> A szállítási cím megegyezik a számlázási címmel
+                    <input class="bemenet" type="number" id="szallirsz" placeholder="Irányító szám">
+                    <input class="bemenet" type="text" id="szalltelepules" placeholder="Település"> <br>
+                    <input class="bemenet" type="text" id="szallutcahazszam" placeholder="Utca házszám"> <br>
+                    <div onchange="Checkbox()" class="checkbox-wrapper-13">
+                        <input type="checkbox" id="c1-13"> <span>A szállítási cím megegyezik a számlázási címmel</span>
                     </div>
                     <h2 class="tovabb">Tovább</h2>
                 </div>
@@ -91,7 +94,7 @@
         <ul class="listCard">
         </ul>
         <div class="checkOut">
-            <div class="total">0 ft</div>
+            <div class="total">0ft</div>
             <div class="closeShopping">Bezárás</div>
         </div>
     </div>
